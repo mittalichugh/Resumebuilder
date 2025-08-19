@@ -1,0 +1,51 @@
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+const Forgotpassword = () => {
+  const [code, setCode] = useState('');
+  const navigate = useNavigate();
+  return (
+    <div className="min-h-screen flex">
+      <div
+        className="w-1/2 bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/images/bg2.png')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-96 min-h-64 bg-white/10 backdrop-blur-md text-gray-200 text-center px-12 py-16 rounded-2xl shadow-2xl border border-white/20">
+            <div className="text-6xl font-extrabold text-indigo-400 mb-4 tracking-wider">RB</div>
+            <div className="text-xl tracking-widest font-semibold">Resume Builder</div>
+            <p className="mt-4 text-sm text-gray-300 leading-relaxed">
+              Build, customize, and download your dream resume in minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="w-1/2 flex items-center justify-center p-8 bg-white">
+        <div className="w-full max-w-md">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold pb-2 mb-4">Enter Confirmation Code</h2>
+            <p className="text-gray-700 text-sm">
+              We emailed you a code. Please enter the code below to verify your account.
+            </p>
+          </div>
+          <input
+            type="text"
+            placeholder="Confirmation code"
+            value={code}
+            onChange={(e) => setCode(e.target.value)}
+            required
+            className="w-full p-3 border rounded-lg border-gray-300 focus:ring-2 focus:ring-indigo-400 outline-none transition"
+          />
+          <button
+            type="submit"
+            className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 shadow-md transition font-semibold"
+            onClick={() => navigate('/Successfull')}
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default Forgotpassword;
