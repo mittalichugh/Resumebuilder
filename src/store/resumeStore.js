@@ -8,7 +8,7 @@ export const useResumeStore = create((set) => ({
     location: "",
     city: "",
     state: "",
-    degree: "",
+    education: [{ degree: "", institution: "", year: "" }],
     university: "",
     yearofpassing: "",
     technicalskills: "",

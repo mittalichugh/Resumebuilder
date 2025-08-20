@@ -13,7 +13,7 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Signed in successfully!");
-      navigate("/");
+      navigate("/Mainpage");
     } catch (error) {
       alert(error.message);
     }
@@ -80,6 +80,7 @@ const Login = () => {
             <button
               type="submit"
               className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 shadow-md transition font-semibold"
+              onClick={() => navigate('/Mainpage')}
             >
               Login
             </button>

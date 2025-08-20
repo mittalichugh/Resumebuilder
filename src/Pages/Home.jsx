@@ -30,10 +30,10 @@ const Home = () => {
           </button>
         </nav>
         <button
-          onClick={() => navigate("/Register")}
+          onClick={() => navigate("/Login")}
           className="bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 shadow-md transition"
         >
-          Get Started
+          Log out
         </button>
       </header>
       <section className="relative px-10 py-20 flex flex-col lg:flex-row items-center justify-center gap-16">
@@ -47,7 +47,7 @@ const Home = () => {
           </p>
           <button
             className="bg-indigo-600 text-white px-8 py-3 rounded-full hover:bg-indigo-700 transition shadow-lg"
-            onClick={() => navigate('/Mainpage')}
+            onClick={() => navigate('/Register')}
           >
             Create Resume for Free
           </button>
